@@ -3,7 +3,6 @@ function inboxDirective(){
 	var directive = {};
 	directive = {
 			restrict : "AE",
-			replace : true,
 			templateUrl : "js/inbox/inbox-temp.html",
 			controllerAs : "inbox",
 			controller : function(InboxServices){
@@ -16,3 +15,4 @@ function inboxDirective(){
 	}
 	return directive;
 }
+

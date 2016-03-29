@@ -1,1 +1,21 @@
-<div>{{inbox.messages.length}}</div>
+<div class="col-md-12 inboxHeader">
+	
+</div>
+<div class="col-md-1 sidebar">
+	<button>Compose</button>
+	<div>
+		<a>Inbox</a>
+		<a>Starred</a>
+	</div>
+</div>
+<div class="col-md-11">
+	<div class="col-md-12 messageBlock" ng-repeat="msg in inbox.messages">        
+		<div class = "col-md-1 mailSelectors">
+		<p><input type="checkbox"><p>
+		<p><span class="glyphicon glyphicon-star" aria-hidden="true"></span></p>
+		</div>
+		<div class = "col-md-2">{{msg.from}}</div>
+		<div class = "col-md-7 message"><p>{{msg.subject}}</p><p>{{msg.message}}</p></div>
+		<div class = "col-md-2">{{msg.date | date: 'dd MMM'}}</div>
+	</div>
+</div>

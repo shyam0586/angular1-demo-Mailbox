@@ -3,11 +3,16 @@
 <head>
 	<title>Mailbox Demo</title>
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body ng-app = "Mailbox">
-	<div class="container-fluid">
-	<div class="col-md-1"></div>
-	<div class="col-md-11" ng-view></div>
+	<nav class="app-navbar">
+		<div class="by">
+			Mailbox
+		</div>
+	</nav>
+	<div class="container-fluid" ng-view>
+	
 	</div>
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>

@@ -1,0 +1,57 @@
+.app-navbar{
+	background-color: #3097d1;
+    border-color: #1c73a5;
+	height:70px;
+	width:100%;
+	color:#f1f1f1;
+}
+.by{
+	padding:18px 25px;
+	font-size:24px;
+	font-weight:bold;
+	font-family:Tahoma;
+}
+.messageBlock{
+	background:#f1f1f1;
+	color:#666;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-top:#ccc 1px solid;
+	cursor:pointer;
+}
+.inboxHeader{
+	height:40px;
+}
+.subject,.message{
+	overflow:hidden;
+	height:20px;
+}
+.message p{
+	display : inline;
+	color:#a3a3a3;
+	padding-right:10px;
+	font-size:12px;
+}
+
+.message p:first-child { 
+    color:#666;
+	font-size:14px;
+}
+
+.mailSelectors p{
+	display:inline;
+	color:#fff;
+	cursor:pointer;
+}
+.mailSelectors p:first-child{
+	padding-right:10px;
+}
+
+.sidebar a{
+	margin-top:20px !important;
+	cursor:pointer;
+}
+
+.sidebar a:hover{
+	text-decoration:none;
+}
