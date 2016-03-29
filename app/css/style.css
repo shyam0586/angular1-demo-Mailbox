@@ -21,6 +21,7 @@
 }
 .inboxHeader{
 	height:40px;
+	padding-top:10px;
 }
 .subject,.message{
 	overflow:hidden;
@@ -50,8 +51,23 @@
 .sidebar a{
 	margin-top:20px !important;
 	cursor:pointer;
+	
 }
 
 .sidebar a:hover{
 	text-decoration:none;
+}
+
+.deleteContainer{
+	background-color: #eee;
+    border: 1px solid #ccc;
+	padding:10px;
+	cursor:pointer;
+}
+.messageBlock .glyphicon{
+font-size:18px;
+}
+
+.goldenColor,.messageBlock .glyphicon:hover{
+	color:#FFD700;
 }

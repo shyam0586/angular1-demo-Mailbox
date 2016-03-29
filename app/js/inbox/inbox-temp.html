@@ -1,21 +1,35 @@
-<div class="col-md-12 inboxHeader">
-	
+<div class="row inboxHeader">
+	<div class="col-md-1"></div>
+	<div class="col-md-11">
+			<div class = "col-md-1">
+				<span class="deleteContainer"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></span>
+			</div>
+		
+	</div>
 </div>
+<div class="row">
 <div class="col-md-1 sidebar">
 	<button>Compose</button>
 	<div>
-		<a>Inbox</a>
+		<a>Inbox <span ng-hide="!inbox.unreadMessages">({{inbox.unreadMessages}})</span></a>
 		<a>Starred</a>
+		<a>Sent</a>
 	</div>
 </div>
 <div class="col-md-11">
-	<div class="col-md-12 messageBlock" ng-repeat="msg in inbox.messages">        
+	<div class="col-md-12 messageBlock" ng-show = "inbox.messages.length === 0">
+		No emails found
+	</div>
+	<div class="col-md-12 messageBlock" ng-repeat="msg in inbox.messages" ng-click = "openMessage()">        
 		<div class = "col-md-1 mailSelectors">
-		<p><input type="checkbox"><p>
-		<p><span class="glyphicon glyphicon-star" aria-hidden="true"></span></p>
+		<p><input type="checkbox"></p>
+		<p>
+			<span ng-click = "inbox.starMessage($index)" ng-class="msg.starred ? 'glyphicon glyphicon-star goldenColor' : 'glyphicon glyphicon-star'" aria-hidden="true"></span>
+		</p>
 		</div>
 		<div class = "col-md-2">{{msg.from}}</div>
 		<div class = "col-md-7 message"><p>{{msg.subject}}</p><p>{{msg.message}}</p></div>
 		<div class = "col-md-2">{{msg.date | date: 'dd MMM'}}</div>
 	</div>
+</div>
 </div>
