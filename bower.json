@@ -1,0 +1,12 @@
+{
+  "name": "MailboxDemo",
+  "description": "a working email inbox with all functionality",
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.4.x",
+    "angular-mocks": "1.4.x",
+    "angular-route": "1.4.x",
+    "jquery": "~2.1.1",
+	"bootstrap" : "^3.2.0"
+  }
+}

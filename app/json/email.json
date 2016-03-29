@@ -1,0 +1,30 @@
+[
+  {
+    "from": "Handler",
+    "date": 1400956671914,
+    "subject": "Email Validation",
+    "id": 50223456,
+	"message" : "We received your request to join Handler. Please click the link below to validate your email address and join the waitlist. Validate my email"
+  },
+  {
+    "from": "Megan Weeds",
+    "date": 1400956671914,
+    "subject": "Apologies for the SPAM email",
+    "id": 10824581,
+	"message" : "Apologies if you received an unusual email from me this morning, it appears that someone gained access to my account this morning. Please DO NOT follow the attachment linked in the email.We are taking the correct measures to prevent this happening again in the future."
+  },
+  {
+    "from": "Gaming Baba",
+    "date": 1400956671914,
+    "subject": "Salary Expectation",
+    "id": 90345551,
+	"message" : "thats better :) 60k is a good salary and Im sure it will give you a great start into Barcelona & Europe. Lets hope for the best."
+  },
+  {
+    "from": "Four Four Two",
+    "date": 1400956671914,
+    "subject": "New subscription",
+    "id": 74838344,
+	"message" : "Thanks for the magazine subscription"
+  }
+]
