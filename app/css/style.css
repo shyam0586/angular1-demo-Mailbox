@@ -71,3 +71,9 @@ font-size:18px;
 .goldenColor,.messageBlock .glyphicon:hover{
 	color:#FFD700;
 }
+.boldFont{
+	font-weight:bold;
+}
+.normal{
+	font-weight:normal;
+}

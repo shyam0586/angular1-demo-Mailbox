@@ -2,29 +2,26 @@
 	<div class="col-md-1"></div>
 	<div class="col-md-11">
 			<div class = "col-md-1">
-				<span class="deleteContainer"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></span>
+				<span class="deleteContainer" ng-click="inbox.removeMessage()"><span class="glyphicon glyphicon-trash" aria-hidden="true" ></span></span>
 			</div>
 		
 	</div>
 </div>
 <div class="row">
 <div class="col-md-1 sidebar">
-	<button>Compose</button>
 	<div>
-		<a>Inbox <span ng-hide="!inbox.unreadMessages">({{inbox.unreadMessages}})</span></a>
-		<a>Starred</a>
-		<a>Sent</a>
+		<a ng-class="inbox.unreadMessage > 0 ? 'boldFont' : 'normalFont'">Inbox <span ng-hide="!inbox.unreadMessage">({{inbox.unreadMessage}})</span></a>
 	</div>
 </div>
 <div class="col-md-11">
 	<div class="col-md-12 messageBlock" ng-show = "inbox.messages.length === 0">
 		No emails found
 	</div>
-	<div class="col-md-12 messageBlock" ng-repeat="msg in inbox.messages" ng-click = "openMessage()">        
+	<div class="col-md-12 messageBlock" ng-repeat="msg in inbox.messages" ng-class="!msg.read > 0 ? 'boldFont' : 'normalFont'" data-toggle="modal" data-target="#myModal" ng-click="inbox.goToMessage(msg.id,$index)">        
 		<div class = "col-md-1 mailSelectors">
-		<p><input type="checkbox"></p>
+		<p><input type="checkbox" ng-click="inbox.mailSelector($index);$event.stopPropagation();"></p>
 		<p>
-			<span ng-click = "inbox.starMessage($index)" ng-class="msg.starred ? 'glyphicon glyphicon-star goldenColor' : 'glyphicon glyphicon-star'" aria-hidden="true"></span>
+			<span ng-click = "inbox.starMessage($index);$event.stopPropagation();" ng-class="msg.starred ? 'glyphicon glyphicon-star goldenColor' : 'glyphicon glyphicon-star'" aria-hidden="true"></span>
 		</p>
 		</div>
 		<div class = "col-md-2">{{msg.from}}</div>

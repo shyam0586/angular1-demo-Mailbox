@@ -9,6 +9,9 @@ function routeFunction($routeProvider){
 		templateUrl : "views/inbox.html",
 		controller : 'InboxCtrl',
 		controllerAs : 'inb'
+	}).when("/inbox/:id",{
+		templateUrl:"views/email.html"
+		
 	})
 		.otherwise({
 			redirectTo : "/inbox"
